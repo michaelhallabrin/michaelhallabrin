@@ -187,9 +187,14 @@
 			   }
 
 		    event.preventDefault();
+		    	//added resume link functionallity
+		    if ($(this).attr("href") == "Resume_Hallabrin.pdf") {
+		    	var documentUrl = $(this).attr("href"); 
+    			window.open(documentUrl, '_blank');
+    		}
+
 		    return false;
 		});
-
 
 	};
 
@@ -201,7 +206,6 @@
 		$el.each(function(){
 			$(this).find('a[data-nav-section="'+section+'"]').closest('li').addClass('active');
 		});
-
 	};
 
 	var navigationSection = function() {
